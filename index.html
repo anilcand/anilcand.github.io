@@ -79,8 +79,18 @@
               <div>scroll down</div>
             </div>
           </div>
-          <img class="hero__img" src="images/Duymaz_ProfilePhoto1.jpeg" alt="Anilcan Duymaz Profile Photo" />
-        </section>
+          
+          <style>
+            .hero__img {
+              object-fit: cover;
+              object-position: center 15% !important; 
+              -webkit-mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
+              mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
+              filter: contrast(1.05); 
+            }
+          </style>
+          
+          <img class="hero__img" src="images/Duymaz_ProfilePhoto1.jpeg" alt="Anilcan Duymaz" />
 
         <main>
           <section id="about" class="about section">
@@ -90,14 +100,16 @@
                 <h2>about</h2>
               </div>
               <div class="about-content">
-                <p class="about-content__text">
-                  I am a Digital Transformation specialist dedicated to orchestrating
-                  seamless transitions in high-stakes environments.
-                  From AI-assisted workflow integration to managing complex data migrations, 
-                  my experiences have shaped my ability to translate technical expertise 
-                  into operational excellence. I combine the analytical rigor of a researcher 
-                  with the agility of a project specialist to help organizations navigate the evolving digital landscape.
-                  <br /><br />Let’s collaborate to turn your ideas into reality!
+                <p class="about-content__text" style="
+                    max-width: 100%; /* Üstteki ayraç %100 genişlikteyse bunu kullan */
+                    width: 100%;
+                    text-align: justify; /* Her iki yana yaslayarak daha profesyonel bir hat oluşturur */
+                    margin: 0; 
+                    padding: 0;
+                    display: block;">
+                    I am a Digital Transformation specialist dedicated to orchestrating seamless transitions in high-stakes environments. From AI-assisted workflow integration to managing complex data migrations, my experience has shaped my ability to translate technical expertise into operational excellence. I combine the analytical rigor of a researcher with the agility of a project specialist to help organizations navigate the evolving digital landscape.
+                    <br /><br />
+                    Let’s collaborate to turn your ideas into reality!
                 </p>
               </div>
               <div class="section-title skills">
@@ -250,7 +262,7 @@
               </div>
             </div>
           </section>
-          <section id="contact" class="contact section">
+          <section id="contact" class="contact section" style="margin-top: 100px;">
             <div class="container">
               <div class="section-title contact-title">
                 <div class="section-title__index">03</div>
